@@ -2,29 +2,20 @@
 
 # Created by: Marshall Demars
 # Created on: Nov 2022
-# This program sees if you guess the right number using while true
-
-import random
-
+# This program lists every number from 1000 to 2000
 
 def main():
-    # This program sees if you guess the right number using while true
+    # This program lists every number from 1000 to 2000
 
-    # Input, Process and Output
-    while True:
-        guess_as_string = input("\nEnter a whole number between 0-9: ")
+    counter = 0
 
-        try:
-            guess_as_int = int(guess_as_string)
-            random_number = random.randint(0, 9)
-            if guess_as_int == random_number:
-                print("\nYou guessed right.")
-                break
-            else:
-                print("\nYou guessed wrong, please try again.")
-
-        except ValueError:
-            print("\nPlease enter a valid number.")
+    # Process and Output
+    for counter in range(1000, 2001):
+        if counter % 5 == 0:
+            print("")
+            print(counter, end=" ")
+        else:
+            print("{0} ".format(counter), end="")
 
     print("\nDone.")
 
